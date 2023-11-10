@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo ID Helper </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id = "TrueOrFalse"></p>
+    <p id = "nameChangeMessage"></p>
+    <p id = "dobChangeMessage"></p>
+    <p id = "underagedMessage"></p>
+    <p id = "finalCheckMsg"></p>
+
+    <div id="valid">
+        <h3>Is the Photo ID Valid? </h3>
+        <button id="validYes">Yes</button>
+        <button id="validNo" onclick="notOK()">No</button>
+    </div>
+    <div id="nameMatch">
+        <h3>Does the name match? </h3>
+        <button id="nameYes">Yes</button>
+        <button id="nameNo" onclick="hideOrShowNameChange()">No</button>
+    </div>
+
+    <div id="nameMatchExtended" style = "display: none;"> 
+        <h3>Is there a name change case? </h3>
+        <button id="nameExtendedYes"onclick = "printNameChangeMsg()">Yes</button>
+        <button id="nameExtendedNo" onclick="notOK()">No</button>
+    </div>
+
+    <div id="dobUpdated">
+        <h3>Does the DOB match?</h3>
+        <button id="dobYes">Yes</button>
+        <button id="dobNo" onclick="hideOrShowDOBChange()">No</button>
+    </div>
+
+    <div id="dobUpdateExtended"style = "display: none">
+        <h3>Is there DOB update case?</h3>
+        <button id="dobExtendedYes" onclick="printDOBChangeMsg()">Yes</button>
+        <button id="dobExtendedNo" onclick="notOK()">No</button>
+    </div>
+
+    <div id="AOM">
+        <h3>Is the person on the ID in the AGE OF MAJORITY?</h3>
+        <button id="aomYes">Yes</button>
+        <button id="aomNO" onclick="hideOrShowAOM()">No</button>
+    </div>
+
+    <div id="aomExtended" style="display:none">
+        <h3>Is the person on the card the primary person?</h3>
+        <button id="aomExtendedYes" onclick="printAOMMsg()">Yes</button>
+        <button id="aomExtendedNo">No</button>
+    </div>
+
+    <div id="expired">
+        <h3>Is the Photo ID expired?</h3>
+        <button id="expiredYes" onclick="notOK()">Yes</button>
+        <button id="expiredNo">No</button>
+    </div>
+
+    <div id="sbp">
+        <h3>Is the ID a passport that requires a Signature bearer page?</h3>
+        <button id="sbpYes" onclick="hideOrShowSBP()">Yes</button>
+        <button id="sbpNo">No</button>
+    </div>
+
+    <div id="sgbExtended" style="display: none;">
+        <h3>Does is have a signed Signature Bearer Page? </h3>
+        <button id="sbpYes">Yes</button>
+        <button id="sbpNo" onclick="notOK()">No</button>
+    </div>
+
+    <div id="dataVisible">
+        <h3>Is all the data visible?</h3>
+        <button id="visibleYes">Yes</button>
+        <button id="visibleNo" onclick="notOK()">No</button>
+    </div>
+
+    <div id="finalCheck">
+        <h3>Is there anything that looks strange about the ID?</h3>
+        <button id="finalCheckYes" onclick="printFinalCheckMessage()">Yes</button>
+        <button id="finalCheckNo" onclick="ok()">No</button>
+    </div>
+
+    
+
+<script src="script.js"></script>
+</body>
+</html> 
